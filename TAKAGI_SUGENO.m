@@ -46,7 +46,7 @@ X1=X1';
 X2=X2';
 Y=Y';
 X=[X1,X2,X3,X4,Y];
-xlswrite('C:\Users\Salar Basiri\Desktop\data.xls',X)
+xlswrite('data.xls',X)
 %% 3: Optimization process
 
 for round=1:level
@@ -113,7 +113,7 @@ disp('---------------------------------------')
  for n=1:vari_num
     
 q=[G,n];
-K=givetekrar(q,vari_num);
+K=giverep(q,vari_num);
 
 fis{n}=genfis1(X,2.^K,'pimf','linear');
 fis{n}.output.range=[-inf,inf];
